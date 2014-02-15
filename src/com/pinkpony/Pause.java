@@ -3,14 +3,11 @@ package com.pinkpony;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Game {
+public class Pause extends AbstractGameState{
 
 	Graphics gr;
-	public Game()
-	{
-		
-	}
 	
+	@Override
 	public void tick(Graphics g)
 	{
 		gr = g;
@@ -19,6 +16,6 @@ public class Game {
 		gr.setColor(Color.PINK);
 		gr.drawString("HandsDance : Pink Pony", 150, 20);
 		gr.drawString("HIT ESC TO LEAVE", 10, 20);	
-		
+		gr.drawString("IN PAUSE SCREEN",400,400);
 	}
 }

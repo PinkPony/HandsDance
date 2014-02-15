@@ -11,11 +11,13 @@ import java.awt.Toolkit;
 import java.awt.Window;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
-public class HandsDance extends JFrame implements KeyListener{
+public class HandsDance extends JFrame implements KeyListener, MouseListener{
 
 	private static final long serialVersionUID = 2276157109184160429L;
 	
@@ -24,7 +26,8 @@ public class HandsDance extends JFrame implements KeyListener{
 	boolean leave = false;
 	Graphics buf;
 	Image iBuf;
-	static Game g;
+	static StateChanger g;
+    public static int[] mouse = new int[5];
 	
 	Dimension size;
 	
@@ -74,15 +77,16 @@ public class HandsDance extends JFrame implements KeyListener{
 		((BufferedImage) iBuf).setRGB(0, 0, WIDTH, HEIGHT, data, 0, WIDTH);
 		
 		buf = iBuf.getGraphics();
-		
+
 		this.addKeyListener(this);
+		this.addMouseListener(this);
 	}
 	
 	public static void main(String[] args)
 	{
 		DisplayMode dm = new DisplayMode(WIDTH,HEIGHT,16, DisplayMode.REFRESH_RATE_UNKNOWN);
 		HandsDance oF = new HandsDance();
-		g = new Game();
+		g = new StateChanger();
 		oF.run(dm);
 	}
 
@@ -164,4 +168,34 @@ public class HandsDance extends JFrame implements KeyListener{
 		if(w != null)
 			w.dispose();
 	}
+
+	@Override
+	public void mouseClicked(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		mouse[3] = 1;
+	}
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		mouse[3] = 0;
+	}
+
+	public void mousePressed(MouseEvent arg0) {
+        mouse[0] = arg0.getButton();
+        mouse[1] = arg0.getX();
+        mouse[2] = arg0.getY();
+    }
+
+    public void mouseReleased(MouseEvent arg0) {
+        mouse[0] = 0;
+        mouse[1] = 0;
+        mouse[2] = 0;
+    }
 }
