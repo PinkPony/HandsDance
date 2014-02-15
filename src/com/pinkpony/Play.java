@@ -15,11 +15,10 @@ public class Play extends AbstractGameState {
 		gr.drawString("HIT ESC TO LEAVE", 10, 20);	
 		gr.drawString("IN PLAY SCREEN",400,400);
 		
+		System.out.println("PLAY MENU");
 		
-		if(HandsDance.mouse[2] != 0)
-		{
-			StateChanger.gameState = GameState.LEVELONE;
-		}
+		StateChanger.gameState = GameState.LEVELONE;
+		
 	}
 	
 	

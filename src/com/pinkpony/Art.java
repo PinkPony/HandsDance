@@ -22,9 +22,13 @@ public class Art {
 			{
 				file = file.replace("images/","");
 			}
+<<<<<<< HEAD
+
+=======
 			
 			
 			
+>>>>>>> 7ee57336d345fab21aba43e1455ee14349947e91
 			Image title = ImageIO.read(Art.class.getResourceAsStream(("/"+file)));//(im);
 			return title;
 		}catch(Exception e){e.printStackTrace();}

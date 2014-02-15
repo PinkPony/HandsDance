@@ -18,6 +18,11 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
+<<<<<<< HEAD
+import com.leapmotion.leap.Controller;
+
+=======
+>>>>>>> 7ee57336d345fab21aba43e1455ee14349947e91
 public class HandsDance extends JFrame implements KeyListener, MouseListener, MouseMotionListener{
 
 	private static final long serialVersionUID = 2276157109184160429L;
@@ -88,8 +93,22 @@ public class HandsDance extends JFrame implements KeyListener, MouseListener, Mo
 	{
 		DisplayMode dm = new DisplayMode(WIDTH,HEIGHT,16, DisplayMode.REFRESH_RATE_UNKNOWN);
 		HandsDance oF = new HandsDance();
+		
+		/*
+		 * Leap Controller 
+		 */
+		
+		LeapStartGamePlay leapStartGamePlay = new LeapStartGamePlay();
+		Controller controller = new Controller();
+		
+		controller.addListener(leapStartGamePlay);
+		
+		 // Remove the sample listener when done
+        //controller.removeListener(leapStartGamePlay);
+        
 		g = new StateChanger();
 		oF.run(dm);
+		
 	}
 
 	public void run(DisplayMode dm)
