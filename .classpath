@@ -4,5 +4,10 @@
 	<classpathentry kind="src" path="images"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/facebook4j-core-2.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/LeapJava.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/Volumes/LeapDeveloperKit_release_mac_1.0.9+8391./LeapDeveloperKit/LeapSDK/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

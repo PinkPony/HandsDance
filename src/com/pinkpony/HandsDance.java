@@ -13,11 +13,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
-public class HandsDance extends JFrame implements KeyListener, MouseListener{
+public class HandsDance extends JFrame implements KeyListener, MouseListener, MouseMotionListener{
 
 	private static final long serialVersionUID = 2276157109184160429L;
 	
@@ -27,13 +28,13 @@ public class HandsDance extends JFrame implements KeyListener, MouseListener{
 	Graphics buf;
 	Image iBuf;
 	static StateChanger g;
-    public static int[] mouse = new int[5];
+    public static int[] mouse = {0,0,0,0,0,0};//new int[6];
 	
 	Dimension size;
 	
 	
-	public static int WIDTH = 800;
-	public static int HEIGHT = 600;
+	public static int WIDTH = 1280;
+	public static int HEIGHT = 720;
 	
 	public HandsDance()
 	{
@@ -45,10 +46,10 @@ public class HandsDance extends JFrame implements KeyListener, MouseListener{
     	setSize(size);
         setPreferredSize(size);
         setMinimumSize(size);
-        // setMaximumSize(size);
+        //setMaximumSize(size);
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTitle("SSB");
+        setTitle("HandsDance");
         
         try{
         setUndecorated(true);
@@ -80,6 +81,7 @@ public class HandsDance extends JFrame implements KeyListener, MouseListener{
 
 		this.addKeyListener(this);
 		this.addMouseListener(this);
+		this.addMouseMotionListener(this);
 	}
 	
 	public static void main(String[] args)
@@ -98,7 +100,6 @@ public class HandsDance extends JFrame implements KeyListener, MouseListener{
 		try
 		{
 			setFullScreen(dm);
-			
 			while(true)
 			{
 				if(leave){
@@ -198,4 +199,17 @@ public class HandsDance extends JFrame implements KeyListener, MouseListener{
         mouse[1] = 0;
         mouse[2] = 0;
     }
+
+	@Override
+	public void mouseDragged(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		mouse[4] = arg0.getX();
+		mouse[5] = arg0.getY();
+	}
 }
