@@ -18,6 +18,7 @@ public class StateChanger {
 		mainmenu = new MainMenu();
 		play = new Play();
 		pause = new Pause();
+		levelOne = new LevelOne();
 		gameState = GameState.MENU;
 	}
 	
