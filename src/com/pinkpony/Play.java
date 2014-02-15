@@ -14,6 +14,12 @@ public class Play extends AbstractGameState {
 		gr.drawString("HandsDance : Pink Pony", 150, 20);
 		gr.drawString("HIT ESC TO LEAVE", 10, 20);	
 		gr.drawString("IN PLAY SCREEN",400,400);
+		
+		
+		if(HandsDance.mouse[2] != 0)
+		{
+			StateChanger.gameState = GameState.LEVELONE;
+		}
 	}
 	
 	

@@ -8,8 +8,9 @@ public class StateChanger {
 	Graphics gr;
 	public static GameState gameState;
 	private MainMenu mainmenu;
-	private Play play;
-	private Pause pause;
+	private AbstractGameState play;
+	private AbstractGameState pause;
+	private AbstractGameState levelOne;
 	
 	
 	public StateChanger()
@@ -38,6 +39,9 @@ public class StateChanger {
 				break;
 			case PLAY:
 				play.tick(gr);
+				break;	
+			case LEVELONE:
+				levelOne.tick(gr);
 				break;
 				
 		}

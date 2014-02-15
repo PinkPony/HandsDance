@@ -19,7 +19,8 @@ public class MainMenu extends AbstractGameState{
 		gr.drawString("HIT ESC TO LEAVE", 10, 20);	
 		gr.drawString("IN MENU SCREEN",400,400);
 		
-		
+		if(HandsDance.mouse[0] != 0)
+			play();
 		
 	}
 	
@@ -31,6 +32,7 @@ public class MainMenu extends AbstractGameState{
 	public void facebookLogin()
 	{
 		Facebook facebook = new FacebookFactory().getInstance();
+		
 		
 	}
 	
