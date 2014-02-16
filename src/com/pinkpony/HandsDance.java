@@ -1,28 +1,10 @@
 package com.pinkpony;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.DisplayMode;
-import java.awt.Graphics;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.Window;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import java.awt.image.BufferedImage;
+import src.com.pinkpony.StateChanger;
 
-import javax.swing.JFrame;
-
-<<<<<<< HEAD
 import com.leapmotion.leap.Controller;
+import com.pinkpony.LeapStartGamePlay;
 
-=======
->>>>>>> 7ee57336d345fab21aba43e1455ee14349947e91
 public class HandsDance extends JFrame implements KeyListener, MouseListener, MouseMotionListener{
 
 	private static final long serialVersionUID = 2276157109184160429L;

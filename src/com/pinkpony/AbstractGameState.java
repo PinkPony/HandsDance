@@ -1,6 +1,5 @@
 package com.pinkpony;
 
-import java.awt.Graphics;
 
 public abstract class AbstractGameState {
 	

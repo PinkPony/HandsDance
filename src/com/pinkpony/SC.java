@@ -1,6 +1,6 @@
 package com.pinkpony;
 
-public class StateChanger {
+public class SC {
 
 	Graphics gr;
 	public static GameState gameState;
@@ -10,7 +10,7 @@ public class StateChanger {
 	private AbstractGameState levelOne;
 
 
-	public StateChanger()
+	public SC()
 	{
 		mainmenu = new MainMenu();
 		play = new Play();

@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="lib"/>
 	<classpathentry kind="src" path="images"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/facebook4j-core-2.0.4.jar"/>
-	<classpathentry kind="lib" path="lib/LeapJava.jar">
+	<classpathentry exported="true" kind="lib" path="lib/LeapJava.jar">
 		<attributes>
-<<<<<<< HEAD
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="HandsDance/lib"/>
-=======
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/Volumes/LeapDeveloperKit_release_mac_1.0.9+8391./LeapDeveloperKit/LeapSDK/lib"/>
->>>>>>> 1f7a1b3ffb883fd46cdf365df4f4fa2d1eeaaa68
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
